@@ -1,0 +1,16 @@
+services:
+
+  lab-dash:
+      image: ghcr.io/anthonygress/lab-dash:latest
+      container_name: lab-dash
+      restart: unless-stopped
+      privileged: true
+      ports:
+        - "8200:2022"
+      environment:
+        - SECRET=Bl36r4lMdD5XCjilYtmf/FSKT1UguW2miann+9kMGt8=      
+      volumes:
+        - ./sys:/sys:ro
+        - ./config:/config
+        - ./uploads:/app/public/uploads
+        - /var/run/docker.sock:/var/run/docker.sock
