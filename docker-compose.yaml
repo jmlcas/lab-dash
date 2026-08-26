@@ -8,7 +8,7 @@ services:
       ports:
         - "8200:2022"
       environment:
-        - SECRET=Bl36r4lMdD5XCjilYtmf/FSKT1UguW2miann+9kMGt8=      
+        - SECRET=Bl36r4lMdD5XCjilYtmf/FSKT1UguW2miann+9kMGt8=
       volumes:
         - ./sys:/sys:ro
         - ./config:/config
